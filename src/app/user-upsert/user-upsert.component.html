@@ -1,0 +1,100 @@
+
+<div class="allform">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item" aria-current="page"><b>Add New User</b></li>
+    </ol>
+  </nav>
+<div class="colpading">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="formValue" (ngSubmit)="SaveUsers()">     
+                <div class="row">
+                    <label class="col-sm-4" for="name">First Name*</label>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="text" formControlName="name" id="name" class="form-control" placeholder="Fisrt Name" required
+                            [ngClass]="{ 'is-invalid': f['name']?.touched && f['name']?.errors, 'is-valid': f['name']?.valid }">
+                            <div *ngIf="f['name']?.touched && f['name']?.errors" class="invalid-feedback">
+                                <div *ngIf="f['name'].errors?.['required']">Name is required!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-4" for="lname">Last Name*</label>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="text" formControlName="lname" id="lname" class="form-control" placeholder="Last Name" required
+                            [ngClass]="{ 'is-invalid': f['lname']?.touched && f['lname']?.errors, 'is-valid': f['lname']?.valid }">
+                            <div *ngIf="f['lname']?.touched && f['lname']?.errors" class="invalid-feedback">
+                               <div *ngIf="f['lname'].errors?.['required']">Last Name is required!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-4" for="address">Address*</label>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="text" formControlName="address" id="address" class="form-control"placeholder="Address" required
+                            [ngClass]="{ 'is-invalid': f['address']?.touched && f['address']?.errors, 'is-valid': f['address']?.valid }">
+                            <div *ngIf="f['address']?.touched && f['address']?.errors" class="invalid-feedback">
+                                <div *ngIf="f['address'].errors?.['required']">Address is required!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-4" for="email">Email*</label>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="email" [ngClass]="{ 'is-invalid': f['email']?.touched &&f['email']?.errors, 'is-valid': f['email']?.valid }"
+                            formControlName="email" id="email" class="form-control" placeholder="Email" required>
+                            <div *ngIf="f['email']?.touched && f['email']?.errors" class="invalid-feedback">
+                            <div *ngIf="f['email'].errors?.['required']">Email is required!</div>
+                                <div *ngIf="f['email'].errors?.['pattern']">Enter Valid Email ID!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-4" for="mobile">Phone Number*</label>
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <input type="text"[ngClass]="{ 'is-invalid': f['mobile']?.touched && f['mobile']?.errors, 'is-valid': f['mobile']?.valid }"
+                            formControlName="mobile" id="mobile" class="form-control" placeholder="Phone Number" required>
+                            <div *ngIf="f['mobile']?.touched && f['mobile']?.errors" class="invalid-feedback">
+                                <div *ngIf="f['mobile'].errors?.['required']">Phone Number is required!</div>
+                                <div *ngIf="f['mobile'].errors?.['pattern']">Numeric Only Accepted!</div>
+                                <div *ngIf="f['mobile'].errors?.['maxlength']">Phone Number is not valid format!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
+                <div class="row" style="margin-left: 30%;">
+                        <button  type="button" style="margin-right: 5%;"  class="btn btn-primary" (click)="SaveUsers()">Save</button>
+                        <button  type="button" class="btn btn-primary"  (click)="onBack()">Back</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+           
+
+
+   
+
+
+
+ 
+
+
+
+
+
+
+ 

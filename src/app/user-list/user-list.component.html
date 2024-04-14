@@ -1,0 +1,86 @@
+<nav class="navbar navbar-light" style="background-color:lightgrey">
+  <div class="container-fluid">
+      <h2>User Details</h2>
+      <div class="d-flex">
+          <button  data-bs-target="#exampleModal" class="btn"  style="background-color:#007bff" type="button" routerLink="/user-upsert"
+            data-bs-toggle="modal"><b style="color: white;">Add Users</b></button>
+      </div>
+  </div>
+</nav>
+
+
+<table class="table mt-4">
+    <thead>
+        <tr>
+          <th scope="col"> First Name</th>
+          <th scope="col"> Last Name</th>
+          <th scope="col"> Address</th>
+          <th scope="col"> Email</th>
+          <th scope="col"> Phone Number</th>
+          <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of myarray">
+            <td>
+                <div *ngIf="data.isEdit">
+                   <input type="text" [(ngModel)]="data.FirstName">
+                </div>
+                <div *ngIf="!data.isEdit">
+                  {{data.FirstName}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="data.isEdit">
+                   <input type="text" [(ngModel)]="data.LastName">
+                </div>
+                <div *ngIf="!data.isEdit">
+                  {{data.LastName}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="data.isEdit">
+                  <input type="text" [(ngModel)]="data.Address">
+                </div>
+                <div *ngIf="!data.isEdit">
+                  {{data.Address}}
+                </div>
+            </td>
+            <td>
+                <div *ngIf="data.isEdit">
+                  <input type="text" [(ngModel)]="data.Email">
+                </div>
+                <div *ngIf="!data.isEdit">
+                  {{data.Email}}
+                </div>
+            </td>
+            <td>
+               <div *ngIf="data.isEdit">
+                  <input type="text" [(ngModel)]="data.Phonenumber">
+                </div>
+                <div *ngIf="!data.isEdit">
+                  {{data.Phonenumber}}
+                </div>
+            </td>
+            <td>
+               <div *ngIf="!data.isEdit">
+                  <i class="fa fa-pencil-square-o px-2" aria-hidden="true" (click)="onEditUser(data)"></i>
+                  <i class="fa fa-trash-o " aria-hidden="true" (click)="deleteUser(data.id)"></i>
+                </div>
+                <div class="center" *ngIf="data.isEdit">
+                  <button type="button" class="btn btn-primary px-2" (click)="updateUser(data)">Update</button>
+                  <button type="button" class="btn btn-secondary" (click)="cancel(data)">Close</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+

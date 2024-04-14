@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "Id": 1,
+      "FirstName": "ak",
+      "LastName": "patil",
+      "Address": "patil",
+      "Email": "patil@hmail.com",
+      "Phonenumber": 9873645765
+    },
+    {
+      "Id": "fe2a",
+      "FirstName": "df",
+      "LastName": "sd",
+      "Address": "sdf",
+      "Email": "sdf@gmail.com",
+      "Phonenumber": "4234364578",
+      "id": "fe2a"
+    },
+    {
+      "id": "dc1b",
+      "Id": 0,
+      "FirstName": "sd",
+      "LastName": "sd",
+      "Address": "fer",
+      "Email": "ak@gmail.com",
+      "Phonenumber": "232546565"
+    },
+    {
+      "id": "3c47",
+      "Id": 0,
+      "FirstName": "seema",
+      "LastName": "Patil",
+      "Address": "Atake",
+      "Email": "seema@gmail.com",
+      "Phonenumber": "9765239795"
+    },
+    {
+      "id": "9572",
+      "Id": 0,
+      "FirstName": "era",
+      "LastName": "s",
+      "Address": "pune",
+      "Email": "era@gmail.com",
+      "Phonenumber": "8259792562"
+    }
+  ]
+}
